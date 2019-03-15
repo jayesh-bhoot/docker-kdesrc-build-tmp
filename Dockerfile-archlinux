@@ -3,7 +3,7 @@ MAINTAINER Mathieu Tarral <mathieu.tarral@gmail.com>
 
 # FRAMEWORKS            |       BUILD DEPENDENCY
 #-----------------------|---------------------------------
-# ki18n                 |       qt5-script
+# ki18n                 |       qt5-script gettext
 # kguiaddons            |       qt5-quickcontrols
 # kwindowsystem         |       qt5-x11extras
 # kdocbook              |       docbook-xsl
@@ -68,7 +68,7 @@ RUN pacman --noconfirm -Sy perl perl-json perl-libwww perl-xml-parser dialog \
                             perl-io-socket-ssl qt5-base perl-yaml-libyaml
 # Frameworks
 RUN pacman --noconfirm -Sy \
-                                qt5-script \
+                                qt5-script gettext\
                                 qt5-quickcontrols \
                                 qt5-x11extras \
                                 docbook-xsl \
