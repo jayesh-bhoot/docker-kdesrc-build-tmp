@@ -1,4 +1,4 @@
-FROM base/archlinux
+FROM archlinux/base
 MAINTAINER Mathieu Tarral <mathieu.tarral@gmail.com>
 
 # FRAMEWORKS            |       BUILD DEPENDENCY
@@ -41,10 +41,9 @@ MAINTAINER Mathieu Tarral <mathieu.tarral@gmail.com>
 # APPLICATIONS          |       BUILD DEPENDENCY
 #-----------------------|---------------------------------
 # lokalize              |       hunspell
-# kdevplatform          |       grantlee-qt5
+# kdevplatform          |       grantlee
 # kdevelop              |       clang llvm
 # kalgebra              |       glu
-# marble                |       automoc4
 # parley                |       qt5-multimedia
 # artikulate            |       qt5-gstreamer
 # step                  |       eigen
@@ -103,10 +102,9 @@ RUN pacman --noconfirm -Sy \
 # Applications
 RUN pacman --noconfirm -Sy \
                                 hunspell \
-                                grantlee-qt5 \
+                                grantlee \
                                 clang llvm \
                                 glu \
-                                automoc4 \
                                 qt5-multimedia \
                                 qt5-gstreamer \
                                 eigen \
